@@ -20,3 +20,6 @@ jobs:
               repo: context.repo.repo,
               labels: ["triage"]
             })
+      - name: warn
+        if: ${{ success() }}
+        run: echo '::debug::looking good'
